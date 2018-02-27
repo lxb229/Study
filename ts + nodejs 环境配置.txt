@@ -1,0 +1,51 @@
+1. 创建 package.json:
+	在根目录文件中执行 ”npm init -y“ 命令创建一个 ’package.json‘.
+	
+2. 创建 tsconfig.json
+	在根目录文件中执行 ”tsc init“ 命令创建一个 tsconfig.json‘.
+	--注：
+		{
+		// 编译器的配置
+		"compilerOptions": {
+		// 目标代码类型
+		"target": "ES2017", /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
+		// 指定生成哪个模块系统代码
+		"module": "commonjs", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+		// 开发的时候要使用哪种的语法
+		// "lib": ["es6"],     /* Specify library files to be included in the compilation. */
+		//允许在js中生成注释
+		"allowJs": true, /* Allow javascript files to be compiled. */
+		// 用于debug 调试
+		"sourceMap": true, /* Generates corresponding '.map' file. */                    /* Concatenate and emit output to single file. */
+		// 编译完后生成的js文件要放在哪个文件夹里面
+		"outDir": "./js", /* Redirect output structure to the directory. */
+		// 仅用来控制输出的目录结构--outDir。
+		"rootDir": "./ts", /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+		//不要向输出发出注释。
+		"removeComments": true, /* Do not emit comments to output. */
+		"strict": true, /* Enable all strict type-checking options. */
+		// 忽略 在表达式和声明上有隐含的'any'类型时报错。
+		"noImplicitAny": true, /* Raise error on expressions and declarations with an implied 'any' type. */
+		// 忽略 在表达式和声明上有隐含的'this'类型时报错。
+		"noImplicitThis": true, /* Raise error on 'this' expressions with an implied 'any' type. */
+		"esModuleInterop": true, /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+		// 在监视模式下运行编译器。会监视输出文件，在它们改变时重新编译。
+		"watch": true
+		}, "include": [// 编译的时候引入哪些文件
+		  //"./src/**/*"
+		],
+		// 排除编译的时候哪些个文件要排除掉
+		"exclude": [
+		  "node_modules"
+		//   "views",
+		//   "static"
+		]
+	  }
+	  
+3.修改launch.json
+	//修改入口文件的路径
+	 "program": "${workspaceFolder}/js/app.js"
+	 
+4.引入代码提示
+	在根目录文件中执行 ”npm install --save @types/模块名称“ 
+		npm install --save @types/node
