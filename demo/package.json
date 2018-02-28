@@ -1,0 +1,17 @@
+{
+  "name": "lee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cheerio": "0.22.7",
+    "@types/node": "^9.4.6",
+    "cheerio": "^1.0.0-rc.2"
+  }
+}
